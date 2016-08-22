@@ -22,5 +22,6 @@ module.exports = {
         loaders: ['babel']
       }
     ]
-  }
+  },
+  plugins: []
 };

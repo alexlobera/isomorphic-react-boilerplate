@@ -1,9 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export default class App extends React.Component {
   render() {
     return (
-      <h1>Isomorphic Hello</h1>
+      <div>
+        <h1>Isomorphic Hello</h1>
+        <Link to="/test">
+          Click me to test the routing and hot reloading
+        </Link>
+      </div>
     );
   }
 }

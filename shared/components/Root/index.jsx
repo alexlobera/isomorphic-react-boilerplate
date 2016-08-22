@@ -4,7 +4,7 @@ import routes from '../../routes';
 
 const Root = ({ store, history }) => (
   <Router
-    routes={routes()}
+    routes={routes}
     history={history}
   />
 );
