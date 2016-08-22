@@ -17,9 +17,6 @@ app.use(WebpackDevMiddleware(compiler, {
 
 app.use(WebpackHotMiddleware(compiler));
 
-// Serve the assets
-app.use(express.static('public'));
-
 app.use(reactApp);
 
 app.listen(config.port);
