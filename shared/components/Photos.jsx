@@ -10,7 +10,7 @@ class Photos extends React.Component {
   }
   
   fetch() {
-    // http://jsonplaceholder.typicode.com/photos/
+    // get http://jsonplaceholder.typicode.com/photos/
   }
   render() {
     return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import { renderToString } from 'react-dom/server'
 import { RouterContext, match } from 'react-router';
 import routes from '../shared/routes';
 
