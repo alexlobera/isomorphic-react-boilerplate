@@ -19,7 +19,6 @@ app.use(WebpackHotMiddleware(compiler));
 
 // Serve the assets
 app.use(express.static('public'));
-app.use(express.static('config'));
 
 app.use(reactApp);
 

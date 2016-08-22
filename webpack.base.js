@@ -22,12 +22,5 @@ module.exports = {
         loaders: ['babel']
       }
     ]
-  },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    })
-  ]
+  }
 };
