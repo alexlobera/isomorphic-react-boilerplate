@@ -8,4 +8,9 @@
 
 3. Change server/app.jsx so it sends the JavaScript bundle
 
-4.  
+4. Add a new route called 'photos' that mapps the Photos component
+
+5. Implement the fetch function in Photos component
+
+6. Implement the componentDidMount function in Photos component
+

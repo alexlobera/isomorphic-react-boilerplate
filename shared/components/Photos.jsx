@@ -8,23 +8,9 @@ class Photos extends React.Component {
     this.state = { photos: [], page: -1};
     this.fetch = this.fetch.bind(this);
   }
-  componentDidMount() {
-    this.fetch();
-  }
+  
   fetch() {
-    fetch('http://jsonplaceholder.typicode.com/photos/', {
-      method: 'get'
-    }).then((response) => {
-        if (response.status >= 400) {
-            throw new Error("Bad response from server");
-        }
-        return response.json(response);
-    })
-    .then((photos) => {
-      const itemsPerPage = 20;
-      this.setState({page: this.state.page + 1});
-      this.setState({photos : photos.slice(this.state.page, itemsPerPage)});
-    });
+    // http://jsonplaceholder.typicode.com/photos/
   }
   render() {
     return (

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "node_modules/.bin/babel-node ./server/app.dev.js",
+    "dev": "node_modules/.bin/babel-node .",
     "build": "NODE_ENV=production webpack --progress --color -p --config webpack.prod.config.js"
   },
   "author": "Alex Lobera",

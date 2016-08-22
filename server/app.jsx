@@ -15,7 +15,7 @@ const reactApp = (req, res) => {
         <RouterContext {...renderProps} />
       );
       // Tip: https://facebook.github.io/react/docs/top-level-api.html
-      const componentHTML = renderToString(InitialComponent);
+      const componentHTML = 'Hello World';
       const HTML = `
         <!DOCTYPE html>
           <html>
@@ -25,7 +25,7 @@ const reactApp = (req, res) => {
             </head>
             <body>
               <div id="app">${componentHTML}</div>
-              <script type="application/javascript" src="/bundle.js"></script>
+              <script type="application/javascript" src=""></script>
             </body>
         </html>    
       `;
