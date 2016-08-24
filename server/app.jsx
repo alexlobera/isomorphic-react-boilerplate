@@ -1,6 +1,7 @@
 import React from 'react';
 import { RouterContext, match } from 'react-router';
 import routes from '../shared/routes';
+import { renderToString } from 'react-dom/server';
 
 const reactApp = (req, res) => {
   // Tip: https://github.com/reactjs/react-router/blob/master/docs/guides/ServerRendering.md
