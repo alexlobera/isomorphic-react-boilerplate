@@ -1,7 +1,11 @@
 import webpack from 'webpack';
-import config from '../webpack.prod.config';
 import express from 'express';
 import log4js from 'log4js';
+import fs from 'fs';
+import https from 'https';
+import compression from 'compression';
+import bodyParser from 'body-parser';
+import config from '../webpack.prod.config';
 import reactApp from './app';
 
 const app = express();
@@ -43,6 +47,12 @@ app.use(log4js.connectLogger(logger, {
  */
 app.use(reactApp);
 
+/**
+ * Application specifics
+ */
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ limit: '8mb' }));
+app.use(compression());
 
 /**
  *   server - http

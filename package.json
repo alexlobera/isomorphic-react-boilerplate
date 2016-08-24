@@ -12,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.13.1",
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
     "es6-promise": "^3.2.1",
     "express": "^4.14.0",
     "immutable": "^3.8.1",
