@@ -8,5 +8,6 @@ export default (
   <Route>
     <Route name="app" component={App} path="/" />
     <Route name="page" component={Page} path="/test" />
+    <Route name="photos" component={Photos} path="/photos" />
   </Route>
 );
