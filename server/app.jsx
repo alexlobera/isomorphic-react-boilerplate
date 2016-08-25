@@ -1,6 +1,7 @@
 import React from 'react';
 import { RouterContext, match } from 'react-router';
 import routes from '../shared/routes';
+import { renderToString } from 'react-dom/server';
 
 const reactApp = (req, res) => {
   // Tip: https://github.com/reactjs/react-router/blob/master/docs/guides/ServerRendering.md
@@ -9,12 +10,12 @@ const reactApp = (req, res) => {
       res.status(500).send(error.message)
     } else if (redirectLocation) {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search)
-    } else if (renderProps) {    
+    } else if (renderProps) {
       const InitialComponent = (
         <RouterContext {...renderProps} />
       );
       // Tip: https://facebook.github.io/react/docs/top-level-api.html
-      const componentHTML = 'Hello World';
+      const componentHTML = renderToString(InitialComponent);
       const HTML = `
         <!DOCTYPE html>
           <html>
@@ -24,9 +25,9 @@ const reactApp = (req, res) => {
             </head>
             <body>
               <div id="app">${componentHTML}</div>
-              <script type="application/javascript" src=""></script>
+              <script type="application/javascript" src="/bundle.js"></script>
             </body>
-        </html>    
+        </html>
       `;
       res.status(200).send(HTML)
     } else {
